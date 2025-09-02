@@ -18,9 +18,6 @@
   border-radius: 30px;
   background-color: black;
 
-
-
-
 }
 
 .home_page_box {
@@ -491,8 +488,8 @@
 
 /* Root camera container */
 .camera {
-  height: 100vh;
   width: 100%;
+  min-height: 100dvh; /* dynamic viewport height */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -502,6 +499,7 @@
 
 /* Main camera box */
 .camera_box {
+    overflow-y: auto;
   height: 85%;
   width: 75%;
   border-radius: 24px;
