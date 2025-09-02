@@ -17,6 +17,11 @@
   width: 80%;
   border-radius: 30px;
   background-color: black;
+
+  min-height: 100svh; /* "Small viewport height" unit */
+  width: 100%;
+
+
 }
 
 .home_page_box {
