@@ -1,0 +1,1791 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.home {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home_page {
+  height: 70%;
+  width: 80%;
+  border-radius: 30px;
+  background-color: black;
+}
+
+.home_page_box {
+  height: 80%;
+  width: 100%;
+  border-radius: 30px;
+}
+
+.home_page_button {
+  height: 20%;
+  width: 100%;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home_page_button_start {
+  height: 70px;
+  width: 130px;
+  background-color: yellow;
+  border-radius: 40px;
+}
+
+.home_page_box {
+  position: relative;
+  height: 80%;
+  width: 100%;
+  border-radius: 30px;
+  overflow: hidden; /* keep curtain inside */
+}
+
+.home_page_box {
+  position: relative;
+  height: 80%;
+  width: 100%;
+  border-radius: 30px;
+  overflow: hidden; /* keep curtain inside */
+}
+
+.home {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home_page {
+  height: 70%;
+  width: 80%;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  position: relative;
+}
+
+.home_page_box {
+  position: relative;
+  height: 80%;
+  width: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Curtain */
+.home_page_box {
+  position: relative;
+  height: 80%;
+  width: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home_page_box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+  border-radius: 30px;
+  transition: transform 1.8s ease-in-out;
+  z-index: 2;
+}
+
+.home_page_box.open::before {
+  transform: translateY(-100%);
+}
+
+/* Birthday Content */
+.birthday_content {
+  color: white;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+  z-index: 1;
+}
+
+.birthday_title {
+  font-size: 3rem;
+  background: linear-gradient(90deg, #ff9a9e, #fad0c4, #fcb69f, #ffdde1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+  animation: glow 2s infinite alternate;
+}
+
+.birthday_message {
+  font-size: 1.3rem;
+  margin-top: 10px;
+  animation: fadeInUp 2s ease-in-out;
+}
+
+/* Balloons */
+.balloons span {
+  font-size: 2.5rem;
+  margin: 0 10px;
+  display: inline-block;
+  animation: floatUp 6s infinite ease-in-out;
+}
+
+.balloons span:nth-child(2) {
+  animation-delay: 1s;
+}
+.balloons span:nth-child(3) {
+  animation-delay: 2s;
+}
+.balloons span:nth-child(4) {
+  animation-delay: 3s;
+}
+
+/* Button */
+.home_page_button {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home_page_button_start {
+  height: 70px;
+  width: 150px;
+  background: linear-gradient(90deg, #ff85a2, #ffb347, #ff85a2);
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.6s;
+  box-shadow: 0px 4px 20px rgba(255, 200, 0, 0.6);
+}
+
+.home_page_button_start:hover {
+  transform: scale(1.1) rotate(-2deg);
+  background: linear-gradient(90deg, #fbc2eb, #a6c1ee);
+  color: white;
+}
+
+/* Cake Layers */
+.cake {
+  margin-top: 30px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  animation: fadeInUp 2s ease-in-out;
+  margin-top: 70px;
+}
+
+.cake_layer {
+  width: 200px;
+  height: 40px;
+  border-radius: 15px;
+  margin: -5px auto 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.cake_layer.chocolate {
+  background: #7b3f00;
+}
+.cake_layer.icing {
+  background: #fff0f5;
+  height: 20px;
+}
+
+/* Candles */
+.candles {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 2;
+}
+
+.candle {
+  width: 14px;
+  height: 50px;
+  background: #fff8dc;
+  border-radius: 3px;
+  position: relative;
+  box-shadow: 0 0 2px #333;
+}
+
+.flame {
+  width: 12px;
+  height: 18px;
+  background: radial-gradient(circle, #ff0, #ff4500);
+  border-radius: 50%;
+  position: absolute;
+  top: -18px;
+  left: 1px;
+  animation: flicker 0.3s infinite alternate;
+}
+
+.flame.out {
+  display: none;
+}
+
+.cake_text {
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #fff;
+  text-shadow: 0 0 8px #ff69b4;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #ff85a2, 0 0 20px #ff85a2;
+  }
+  to {
+    text-shadow: 0 0 15px #fff, 0 0 25px #ffb347, 0 0 35px #ffb347;
+  }
+}
+@keyframes floatUp {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-150px);
+    opacity: 0;
+  }
+}
+@keyframes flicker {
+  from {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.2) translateY(-2px);
+    opacity: 0.8;
+  }
+}
+
+.download {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.download_body {
+  height: 80vh;
+  width: 70%;
+  border: 2px solid black;
+  border-radius: 30px;
+  display: flex;
+}
+
+.download_photo {
+  height: 100%;
+  width: 60%;
+  background-color: aquamarine;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.download_buttons {
+  height: 100%;
+  width: 40%;
+  background-color: aqua;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.download_retake {
+  height: 50px;
+  width: 120px;
+  background-color: blanchedalmond;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.download_pic_button {
+  height: 50px;
+  width: 120px;
+  background-color: blanchedalmond;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  padding: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* Download Component Container */
+.download {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111; /* Dark background */
+}
+
+/* Body of the download panel */
+.download_body {
+  height: 80vh;
+  width: 70%;
+  border-radius: 30px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.5);
+  background: #222;
+}
+
+/* Photo Gallery Section */
+.download_photo {
+  height: 100%;
+  width: 60%;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-y: auto;
+  padding: 10px;
+  gap: 10px;
+}
+
+.download_photo img {
+  width: 90%;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.download_photo img:hover {
+  transform: scale(1.05);
+}
+
+/* Buttons Section */
+.download_buttons {
+  height: 100%;
+  width: 40%;
+  background-color: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 20px;
+}
+
+/* Button Styles */
+.download_retake,
+.download_pic_button,
+.download_separate {
+  height: 50px;
+  width: 180px;
+  background-color: #ff85a2;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+  transition: 0.3s;
+}
+
+.download_retake:hover,
+.download_pic_button:hover,
+.download_separate:hover {
+  transform: scale(1.1);
+  background-color: #ffb347;
+}
+
+/* Button hover effect */
+.download_buttons div {
+  text-align: center;
+}
+
+/* Scrollbar for photo gallery */
+.download_photo::-webkit-scrollbar {
+  width: 8px;
+}
+
+.download_photo::-webkit-scrollbar-track {
+  background: #222;
+}
+
+.download_photo::-webkit-scrollbar-thumb {
+  background: #ff85a2;
+  border-radius: 10px;
+}
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+  .download_body {
+    flex-direction: column;
+    width: 90%;
+    height: 90vh;
+  }
+  .download_photo,
+  .download_buttons {
+    width: 100%;
+    height: 50%;
+  }
+}
+
+/* Root camera container */
+.camera {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #1c1c1c, #0d0d0d);
+  padding: 10px;
+}
+
+/* Main camera box */
+.camera_box {
+  height: 85%;
+  width: 75%;
+  border-radius: 24px;
+  background: rgba(20, 20, 20, 0.95);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.65);
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Camera view */
+.camera_box_area {
+  height: 65%;
+  width: 100%;
+  background: black;
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.countdown {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 6rem;
+  color: #ffea00;
+  font-weight: bold;
+  text-shadow: 0 0 15px rgba(255, 234, 0, 0.7);
+  z-index: 5;
+  animation: pulse 1s infinite;
+}
+
+/* Filters */
+.camera_box_filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 8px 12px;
+  background: rgba(34, 34, 34, 0.9);
+}
+
+.camera_box_filters button {
+  padding: 6px 14px;
+  border-radius: 14px;
+  border: none;
+  background: linear-gradient(135deg, #444, #555);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.camera_box_filters button:hover {
+  background: linear-gradient(135deg, #ff85a2, #ff3b6f);
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(255, 133, 162, 0.4);
+}
+
+/* Timer & Burst Controls */
+.camera_box_controls {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  padding: 12px;
+  background: rgba(34, 34, 34, 0.9);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.control_group {
+  position: relative;
+}
+
+.control_button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #444, #555);
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.25s ease;
+}
+
+.control_button:hover {
+  background: linear-gradient(135deg, #ff85a2, #ff3b6f);
+  transform: scale(1.05);
+}
+
+.control_dropdown {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: rgba(40, 40, 40, 0.95);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+  z-index: 10;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.control_dropdown div {
+  padding: 8px 14px;
+  cursor: pointer;
+  color: #ddd;
+  transition: all 0.2s ease;
+}
+
+.control_dropdown div:hover {
+  background: linear-gradient(135deg, #ff85a2, #ff3b6f);
+  color: #fff;
+}
+
+/* Capture & Switch Buttons */
+.camera_box_click {
+  height: 90px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.2rem;
+  margin-top: 8px;
+}
+
+.camera_button_pic,
+.camera_button_switch {
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+}
+
+.camera_button_pic {
+  background: radial-gradient(circle at 30% 30%, #ff4b4b, #d60000);
+  color: white;
+}
+
+.camera_button_switch {
+  background: radial-gradient(circle at 30% 30%, #3ba9ff, #0066cc);
+  color: white;
+}
+
+.camera_button_pic:hover,
+.camera_button_switch:hover {
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.65);
+}
+
+/* Captured Images Preview */
+.captured_images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px;
+  background: rgba(25, 25, 25, 0.95);
+}
+
+.captured_images img {
+  width: 110px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.captured_images img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 14px rgba(255, 133, 162, 0.6);
+}
+
+/* Animations */
+@keyframes pulse {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* CameraApp.css - Responsive Version */
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.camera-app {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+}
+
+.camera-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+
+.camera-header h2 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.camera-indicators {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.indicator {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 0.8rem;
+}
+
+.indicator.active {
+  background: rgba(255, 133, 162, 0.3);
+  color: #ff85a2;
+}
+
+.camera-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+.camera-preview {
+  flex: 1;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  min-height: 250px;
+}
+
+.camera-preview.flash {
+  animation: flash 0.1s;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.countdown {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5rem;
+  color: #ffcc00;
+  font-weight: bold;
+  text-shadow: 0 0 20px rgba(255, 204, 0, 0.7);
+  z-index: 10;
+}
+
+.capturing-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  z-index: 5;
+}
+
+.main-controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.control-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  padding: 0.5rem;
+}
+
+.control-button:hover {
+  transform: scale(1.1);
+}
+
+.control-icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.3rem;
+}
+
+.control-label {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.capture-button {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.capture-button:not(.disabled):hover {
+  transform: scale(1.05);
+}
+
+.capture-button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.capture-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 3px solid white;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+.capture-inner {
+  width: 60px;
+  height: 60px;
+  background: #ff3b3b;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.capture-button:active .capture-inner {
+  transform: scale(0.9);
+}
+
+.secondary-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.control-group {
+  position: relative;
+}
+
+.control-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5rem 0.8rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.2s;
+  min-width: 70px;
+}
+
+.control-option:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.option-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.option-label {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.options-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(40, 40, 60, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  z-index: 20;
+  min-width: 100%;
+}
+
+.option-item {
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-align: center;
+}
+
+.option-item:hover {
+  background: rgba(255, 133, 162, 0.3);
+}
+
+.filters-panel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(30, 30, 50, 0.95);
+  backdrop-filter: blur(10px);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 1rem;
+  z-index: 30;
+  animation: slideUp 0.3s ease;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.filters-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.filters-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.filters-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+}
+
+.filter-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.8rem 0.5rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-option:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.filter-option.active {
+  background: rgba(255, 133, 162, 0.3);
+  box-shadow: 0 0 0 2px #ff85a2;
+}
+
+.filter-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.filter-name {
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.captured-images-panel {
+  background: rgba(30, 30, 50, 0.9);
+  border-radius: 16px;
+  padding: 1rem;
+  margin-top: auto;
+  max-height: 25vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.panel-header h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.clear-btn {
+  background: rgba(255, 90, 90, 0.3);
+  color: #ff5a5a;
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.2s;
+}
+
+.clear-btn:hover {
+  background: rgba(255, 90, 90, 0.5);
+}
+
+.images-grid {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scrollbar-width: thin;
+}
+
+.images-grid::-webkit-scrollbar {
+  height: 6px;
+}
+
+.images-grid::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+.image-thumbnail {
+  border-radius: 8px;
+  overflow: hidden;
+  height: 70px;
+  min-width: 70px;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+
+.image-thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.image-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Snapchat-Style Camera App CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  background: #000;
+  color: white;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.camera-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.camera-view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 1;
+}
+
+.camera-view video,
+.camera-view canvas {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Top controls */
+.top-controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+}
+
+.flash-toggle,
+.camera-switch {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  pointer-events: auto;
+}
+
+/* Bottom controls */
+.bottom-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 3;
+  gap: 20px;
+}
+
+.capture-button {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: white;
+  border: 4px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+/* Filter carousel */
+.filter-carousel {
+  position: absolute;
+  bottom: 120px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  overflow-x: auto;
+  padding: 0 10px;
+  z-index: 3;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  pointer-events: auto;
+}
+
+.filter-carousel::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+.filter-item {
+  flex: 0 0 auto;
+  width: 80px;
+  height: 80px;
+  border-radius: 15px;
+  margin-right: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 2px solid transparent;
+}
+
+.filter-item.active {
+  border-color: white;
+}
+
+.filter-icon {
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.filter-name {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Preview screen */
+.preview-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 10;
+  display: none;
+  flex-direction: column;
+}
+
+.preview-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.preview-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+}
+
+.preview-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+}
+
+.download-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-size: 24px;
+}
+
+/* Countdown */
+.countdown {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  z-index: 5;
+  display: none;
+}
+
+/* Flash effect */
+.flash-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  opacity: 0;
+  z-index: 4;
+  pointer-events: none;
+}
+
+/* Orientation message */
+.orientation-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 100;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.orientation-message i {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 480px) {
+  .countdown-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    color: white;
+    font-weight: bold;
+    z-index: 999; /* above everything */
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    pointer-events: none;
+    text-align: center;
+  }
+
+  .camera {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background: #000; /* black background behind camera */
+  }
+
+  .camera_box {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 0;
+    border: 0;
+    overflow: hidden; /* hide cropped edges */
+  }
+
+  .camera_box_area {
+    position: absolute; /* fill parent */
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: 0;
+    height: 100%; /* force full height */
+    object-fit: cover; /* crop to fill, no black bars */
+    border-radius: 0;
+  }
+
+  /* Position filters, controls & capture button */
+  .camera_box_filters,
+  .camera_box_controls,
+  .camera_box_click {
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+  }
+
+  .camera_box_filters {
+    bottom: 120px;
+  }
+
+  .camera_box_controls {
+    bottom: 70px;
+    gap: 15px;
+  }
+
+  .camera_box_click {
+    bottom: 20px;
+    gap: 25px;
+  }
+
+  .top-controls {
+    padding: 12px;
+  }
+
+  .flash-toggle,
+  .camera-switch {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+
+  .capture-button {
+    width: 60px;
+    height: 60px;
+  }
+
+  .bottom-controls {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .filter-carousel {
+    bottom: 100px;
+    height: 80px;
+  }
+
+  .filter-item {
+    width: 65px;
+    height: 65px;
+    border-radius: 12px;
+  }
+
+  .filter-icon {
+    font-size: 22px;
+  }
+
+  .filter-name {
+    font-size: 11px;
+  }
+
+  .preview-controls {
+    padding: 20px;
+  }
+
+  .preview-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  .download-btn {
+    width: 55px;
+    height: 55px;
+    font-size: 22px;
+  }
+
+  .filter-carousel {
+    position: absolute;
+    bottom: 120px; /* above capture button */
+    left: 0;
+    right: 0;
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 10px;
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .filter-carousel::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+
+  .filter-item {
+    height: auto;
+    width: auto;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s ease;
+  }
+
+  .filter-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .camera_box_click {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    z-index: 3;
+  }
+
+  .control_wrapper {
+    position: relative; /* keep relative to button */
+  }
+
+  .control_button {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    padding: 15px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+  }
+
+  .control_wrapper {
+    position: relative; /* button is the reference point */
+    display: flex;
+    justify-content: center;
+  }
+
+  .control_dropdown {
+    position: absolute;
+    top: -200%; /* place it directly above the button */
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 8px; /* small gap above button */
+    background: rgba(0, 0, 0, 0.8);
+    padding: 8px 12px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    color: white;
+    white-space: nowrap;
+    z-index: 5;
+  }
+
+  .dropdown_item {
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 6px;
+  }
+
+  .dropdown_item:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .download_photo_wrapper {
+    position: relative; /* for absolute buttons */
+    width: 100%;
+    height: 100vh; /* full screen per photo */
+    overflow: hidden;
+  }
+
+  .download_photo_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* fill screen, crop edges if necessary */
+    display: block;
+  }
+
+  .download_button {
+    position: absolute;
+    right: 2%;
+    top: 93%; /* vertically center */
+    transform: translateY(-50%);
+    display: flex;
+    gap: 20px; /* spacing between buttons */
+    z-index: 10;
+    overflow-y: scroll;
+  }
+
+  .download_button {
+    display: flex; /* arrange in a row */
+    gap: 12px; /* spacing between buttons */
+    overflow-x: auto; /* horizontal scroll */
+    white-space: nowrap; /* prevent wrapping to next line */
+    padding: 10px;
+    margin-left: 2rem;
+    max-width: 98%; /* optional: limit width so scroll appears */
+    scrollbar-width: thin; /* Firefox */
+  }
+
+  .download_button::-webkit-scrollbar {
+    height: 6px; /* horizontal scrollbar height */
+  }
+
+  .download_button::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+  }
+
+  .download_button .download_separate,
+  .download_button .download_retake,
+  .download_button .download_merge_button,
+  .download_button .download_pic_button {
+    height: auto;
+    width: auto;
+    padding: 10px;
+    background-color: rgba(246, 102, 102, 0.6);
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .download {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .download_body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 0;
+  }
+
+  .download_photo_wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .download_photo_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .photo_counter {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 10;
+  }
+  .nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 20;
+    font-size: 20px;
+  }
+
+  .left-arrow {
+    left: 10px;
+  }
+
+  .right-arrow {
+    right: 10px;
+  }
+
+  .nav-arrow:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* Animation for capture button */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.capture-button:active {
+  animation: pulse 0.2s ease-in-out;
+}
+
+/* Filter styles for demonstration */
+.filter-normal {
+  background: rgba(255, 255, 255, 0.1);
+}
+.filter-dog {
+  background: rgba(255, 200, 100, 0.2);
+}
+.filter-flower {
+  background: rgba(255, 100, 200, 0.2);
+}
+.filter-vintage {
+  background: rgba(100, 100, 255, 0.2);
+}
+.filter-blackwhite {
+  background: rgba(100, 100, 100, 0.3);
+}
+.filter-rainbow {
+  background: rgba(100, 255, 255, 0.2);
+}
+
+/* Show orientation message on portrait mode */
+@media (max-width: 768px) and (orientation: portrait) {
+  .orientation-message {
+    display: flex;
+  }
+
+  .camera-container,
+  .preview-screen {
+    display: none !important;
+  }
+}
+
+/* Hide orientation message in landscape mode */
+@media (max-width: 768px) and (orientation: landscape) {
+  .orientation-message {
+    display: none;
+  }
+}
